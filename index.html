@@ -196,6 +196,61 @@
       background: var(--rose-gold);
       transform: translateY(-1px);
     }
+
+    .listino-voce {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 11px 8px;
+      border-bottom: 1px solid rgba(212,163,115,0.12);
+      transition: background 0.2s;
+      border-radius: 6px;
+      gap: 12px;
+    }
+
+    .listino-voce:hover {
+      background: #F8E9E2;
+    }
+
+    .listino-voce:last-child {
+      border-bottom: none;
+    }
+
+    .listino-prezzo {
+      font-family: 'Playfair Display', serif;
+      font-size: 19px;
+      color: #A67C52;
+      white-space: nowrap;
+      margin-left: 12px;
+    }
+
+    .listino-free {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #D4A373;
+      background: rgba(212,163,115,0.12);
+      padding: 3px 10px;
+      border-radius: 20px;
+      border: 1px solid rgba(212,163,115,0.35);
+      margin-left: 12px;
+      white-space: nowrap;
+    }
+
+    .listino-badge {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: white;
+      background: #D4A373;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
   </style>
 </head>
 
@@ -262,6 +317,7 @@
           <a href="#home" class="nav-link">Home</a>
           <a href="#problemi" class="nav-link">Problemi</a>
           <a href="#trattamenti" class="nav-link">Trattamenti</a>
+          <a href="#listino" class="nav-link">Listino</a>
           <a href="#servizi" class="nav-link">Servizi</a>
           <a href="#sedi" class="nav-link">Sedi</a>
 
@@ -291,6 +347,7 @@
       <a href="#home" class="block">Home</a>
       <a href="#problemi" class="block">Problemi</a>
       <a href="#trattamenti" class="block">Trattamenti</a>
+      <a href="#listino" class="block">Listino</a>
       <a href="#servizi" class="block">Servizi</a>
       <a href="#sedi" class="block">Sedi</a>
 
@@ -327,7 +384,7 @@
       </h1>
 
       <p class="max-w-2xl mx-auto text-base md:text-lg text-white font-light mb-8 italic text-shadow">
-        Nei centri Michela Parrucchieri di Manduria e Mesagne puoi scoprire trattamenti mirati per il benessere di cute e capelli, senza rinunciare all’esperienza completa di un salone di bellezza.
+        Nei centri Michela Parrucchieri di Manduria e Mesagne puoi scoprire trattamenti mirati per il benessere di cute e capelli, senza rinunciare all'esperienza completa di un salone di bellezza.
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -388,7 +445,7 @@
         <div class="problem-item">
           <h3 class="text-xl serif italic text-gray-900 mb-3">Cute stressata</h3>
           <p class="text-sm text-gray-600 leading-relaxed">
-            Cambi di stagione, trattamenti frequenti, stress e abitudini quotidiane possono alterare l’equilibrio del cuoio capelluto.
+            Cambi di stagione, trattamenti frequenti, stress e abitudini quotidiane possono alterare l'equilibrio del cuoio capelluto.
           </p>
         </div>
 
@@ -427,7 +484,7 @@
             Un trattamento pensato per purificare e riequilibrare il cuoio capelluto, particolarmente interessante quando sono presenti cute grassa, impurità o segnali di caduta.
           </p>
           <p class="text-sm text-gray-600 leading-relaxed">
-            L’obiettivo è favorire una sensazione di freschezza, pulizia e maggiore equilibrio, partendo sempre dalle reali esigenze della persona.
+            L'obiettivo è favorire una sensazione di freschezza, pulizia e maggiore equilibrio, partendo sempre dalle reali esigenze della persona.
           </p>
         </div>
 
@@ -490,6 +547,74 @@
     </div>
   </section>
 
+  <!-- LISTINO PREZZI -->
+  <section id="listino" class="py-24 bg-[#F8E9E2] text-center">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="text-[#D4A373] uppercase tracking-[0.3em] text-[10px] font-bold mb-2 block">Prezzi trasparenti</span>
+      <h2 class="text-4xl md:text-5xl italic serif text-gray-900">Il nostro listino</h2>
+      <div class="section-divider"></div>
+      <p class="text-sm text-gray-600 max-w-2xl mx-auto mt-6 mb-14">
+        Tutti i servizi disponibili nelle sedi di Manduria e Mesagne.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+
+        <div class="bg-white rounded-3xl p-8 soft-shadow">
+          <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-[#D4A373] mb-4 pb-3 border-b border-[#D4A373]/20">Piega & Styling</p>
+          <div class="listino-voce"><span class="text-sm text-gray-700 font-light">Piega capelli corti</span><span class="listino-prezzo">€ 12</span></div>
+          <div class="listino-voce"><span class="text-sm text-gray-700 font-light">Piega capelli lunghi</span><span class="listino-prezzo">€ 15</span></div>
+          <div class="listino-voce"><span class="text-sm text-gray-700 font-light">Piega con piastra</span><span class="listino-prezzo">€ 15</span></div>
+          <div class="listino-voce"><span class="text-sm text-gray-700 font-light">Taglio</span><span class="listino-prezzo">€ 13</span></div>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 soft-shadow">
+          <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-[#D4A373] mb-4 pb-3 border-b border-[#D4A373]/20">Colore & Schiaritura</p>
+          <div class="listino-voce"><span class="text-sm text-gray-700 font-light">Colore senza ammoniaca</span><span class="listino-prezzo">€ 32</span></div>
+          <div class="listino-voce"><span class="text-sm text-gray-700 font-light">Colore total senza ammoniaca</span><span class="listino-prezzo">€ 40</span></div>
+          <div class="listino-voce"><span class="text-sm text-gray-700 font-light">Schiariture</span><span class="listino-prezzo">€ 80</span></div>
+          <div class="listino-voce"><span class="text-sm text-gray-700 font-light">Schiariture con tonalizzante</span><span class="listino-prezzo">€ 90</span></div>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 soft-shadow">
+          <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-[#D4A373] mb-4 pb-3 border-b border-[#D4A373]/20">Trattamenti Capelli</p>
+          <div class="listino-voce"><span class="text-sm text-gray-700 font-light">Trattamento ristrutturante lunghezze</span><span class="listino-prezzo">€ 15</span></div>
+          <div class="listino-voce">
+            <span class="text-sm text-gray-700 font-light">Trattamento ozono + ossigeno <span class="listino-badge">Signature</span></span>
+            <span class="listino-prezzo">€ 35</span>
+          </div>
+          <div class="listino-voce">
+            <span class="text-sm text-gray-700 font-light">Keratina lisciante Nanoplastia <span class="listino-badge">Signature</span></span>
+            <span class="listino-prezzo">€ 130</span>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 soft-shadow">
+          <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-[#D4A373] mb-4 pb-3 border-b border-[#D4A373]/20">Viso & Consulenze</p>
+          <div class="listino-voce">
+            <span class="text-sm text-gray-700 font-light">Trattamento viso acido ialuronico <span class="listino-badge">Signature</span></span>
+            <span class="listino-prezzo">€ 50</span>
+          </div>
+          <div class="listino-voce"><span class="text-sm text-gray-700 font-light">Consulenza sposa + prova acconciatura</span><span class="listino-prezzo">€ 50</span></div>
+          <div class="listino-voce"><span class="text-sm text-gray-700 font-light">Consulenza infoltimento & extension</span><span class="listino-free">Gratuita</span></div>
+        </div>
+
+      </div>
+
+      <p class="text-xs text-gray-400 mt-10 max-w-xl mx-auto leading-relaxed">
+        * I prezzi possono variare in base alla lunghezza, densità e condizioni specifiche dei capelli. Contattaci per un preventivo personalizzato.
+      </p>
+
+      <div class="mt-10">
+        <button type="button"
+                class="cta-trigger btn-brand bg-black text-white px-10 py-4 rounded-full uppercase text-xs tracking-widest font-bold shadow-lg hover:bg-[#D4A373] transition"
+                data-open-contact>
+          <i data-lucide="message-circle" size="16"></i>
+          Prenota ora
+        </button>
+      </div>
+    </div>
+  </section>
+
   <!-- ALTRI SERVIZI -->
   <section id="servizi" class="py-24 bg-white text-center">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -497,7 +622,7 @@
       <h2 class="text-4xl md:text-5xl italic serif text-gray-900">Benessere, cura e bellezza a 360°</h2>
       <div class="section-divider"></div>
       <p class="text-sm text-gray-600 max-w-3xl mx-auto mt-6">
-        Accanto ai trattamenti specifici per cute e capelli, nei nostri centri trovi anche tutti i servizi che rendono completa l’esperienza di un salone.
+        Accanto ai trattamenti specifici per cute e capelli, nei nostri centri trovi anche tutti i servizi che rendono completa l'esperienza di un salone.
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-16 text-center">
@@ -537,7 +662,7 @@
           </div>
           <h3 class="text-lg serif italic mb-2 text-gray-900">Esperienza & Consulenza</h3>
           <p class="text-xs text-gray-500 leading-relaxed">
-            Un approccio attento e personalizzato, costruito sull’esperienza e sull’ascolto reale delle esigenze di ogni cliente.
+            Un approccio attento e personalizzato, costruito sull'esperienza e sull'ascolto reale delle esigenze di ogni cliente.
           </p>
         </div>
       </div>
@@ -709,5 +834,6 @@
       }
     });
   </script>
+
 </body>
 </html>
